@@ -2,7 +2,7 @@ import {SupermarketCatalog} from "./SupermarketCatalog"
 import {OffersByProduct, ShoppingCart} from "./ShoppingCart"
 import {Product} from "./Product"
 import {Receipt} from "./Receipt"
-import {Offer} from "./Offer"
+import {Offer, SpecialOffer} from "./Offer"
 import {SpecialOfferType} from "./SpecialOfferType"
 
 export class Teller {
@@ -12,7 +12,7 @@ export class Teller {
     public constructor(private readonly catalog: SupermarketCatalog ) {
     }
 
-    public addSpecialOffer(offer: Offer): void {
+    public addSpecialOffer(offer: SpecialOffer): void {
         this.offers[offer.product.name] = offer;
     }
 

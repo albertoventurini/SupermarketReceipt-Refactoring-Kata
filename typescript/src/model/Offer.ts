@@ -3,7 +3,13 @@ import {SpecialOfferType} from "./SpecialOfferType"
 import {Discount} from "./Discount";
 import {SupermarketCatalog} from "./SupermarketCatalog";
 
-export class Offer {
+export interface SpecialOffer {
+    readonly product: Product
+
+    apply(catalog: SupermarketCatalog, quantity: number): Discount | null
+}
+
+export class Offer implements SpecialOffer {
 
     public constructor(public readonly offerType: SpecialOfferType,
                        public readonly product: Product,
