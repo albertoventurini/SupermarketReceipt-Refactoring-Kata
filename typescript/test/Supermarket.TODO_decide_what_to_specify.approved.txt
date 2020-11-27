@@ -1,1 +1,92 @@
-{}
+{
+  "discounts": [
+    {
+      "description": "10% off",
+      "discountAmount": 0.495,
+      "product": {
+        "name": "toothbrush",
+        "unit": 1
+      }
+    },
+    {
+      "description": "3 for 2",
+      "discountAmount": 4,
+      "product": {
+        "name": "assWipingPaper 4 rolls",
+        "unit": 1
+      }
+    },
+    {
+      "description": "5 for 21",
+      "discountAmount": 4,
+      "product": {
+        "name": "Arabica coffee beans",
+        "unit": 1
+      }
+    },
+    {
+      "description": "2 for 9",
+      "discountAmount": 3,
+      "product": {
+        "name": "Mulinobianco integrali",
+        "unit": 1
+      }
+    }
+  ],
+  "items": [
+    {
+      "price": 1.99,
+      "product": {
+        "name": "apples",
+        "unit": 0
+      },
+      "quantity": 2.5,
+      "totalPrice": 4.975
+    },
+    {
+      "price": 0.99,
+      "product": {
+        "name": "toothbrush",
+        "unit": 1
+      },
+      "quantity": 5,
+      "totalPrice": 4.95
+    },
+    {
+      "price": 2,
+      "product": {
+        "name": "assWipingPaper 4 rolls",
+        "unit": 1
+      },
+      "quantity": 6,
+      "totalPrice": 12
+    },
+    {
+      "price": 5,
+      "product": {
+        "name": "Arabica coffee beans",
+        "unit": 1
+      },
+      "quantity": 6,
+      "totalPrice": 30
+    },
+    {
+      "price": 5,
+      "product": {
+        "name": "Mulinobianco integrali",
+        "unit": 1
+      },
+      "quantity": 6,
+      "totalPrice": 30
+    },
+    {
+      "price": 1.5,
+      "product": {
+        "name": "Libero quotidiano",
+        "unit": 1
+      },
+      "quantity": 1,
+      "totalPrice": 1.5
+    }
+  ]
+}
