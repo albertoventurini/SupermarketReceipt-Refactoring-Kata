@@ -49,7 +49,7 @@ export class ShoppingCart {
         for (const productName in this.productQuantities()) {
             const quantity: number = this._productQuantities[productName].quantity;
             if (offers[productName]) {
-                const offer : Offer = offers[productName];
+                const offer = offers[productName];
                 const discount = offer.apply(catalog, quantity)
                 if (discount != null)
                     receipt.addDiscount(discount);

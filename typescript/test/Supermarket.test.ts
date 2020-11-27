@@ -7,6 +7,7 @@ import {Teller} from "../src/model/Teller"
 import {SpecialOfferType} from "../src/model/SpecialOfferType"
 import {ProductUnit} from "../src/model/ProductUnit"
 import {Offer} from "../src/model/Offer";
+import { FiveForAmount } from "../src/model/offers/FiveForAmount"
 const approvals = require('approvals')
 
 type Approvals = {
@@ -47,7 +48,7 @@ describe('Supermarket', function () {
 
         const teller: Teller = new Teller(catalog);
         teller.addSpecialOffer(new Offer(SpecialOfferType.ThreeForTwo, toiletPaper, 0));
-        teller.addSpecialOffer(new Offer(SpecialOfferType.FiveForAmount, coffeeBeans, 21));
+        teller.addSpecialOffer(new FiveForAmount(coffeeBeans, 21));
         teller.addSpecialOffer(new Offer(SpecialOfferType.TenPercentDiscount, toothbrush, 10.0));
         teller.addSpecialOffer(new Offer(SpecialOfferType.TwoForAmount, biscuits, 9));
 
