@@ -2,10 +2,8 @@ import {Product} from "./Product"
 import {SupermarketCatalog} from "./SupermarketCatalog"
 import * as _ from "lodash"
 import {ProductQuantity} from "./ProductQuantity"
-import {Discount} from "./Discount"
 import {Receipt} from "./Receipt"
-import {Offer, SpecialOffer} from "./Offer"
-import {SpecialOfferType} from "./SpecialOfferType"
+import { SpecialOffer } from "./Offer"
 
 type ProductQuantities = { [productName: string]: ProductQuantity }
 export type OffersByProduct = {[productName: string]: SpecialOffer};
