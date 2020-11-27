@@ -15,10 +15,11 @@ export class ThreeForTwo extends Offer {
         const unitPrice: number= catalog.getUnitPrice(this.product);
         let discount : Discount|null = null;
         const x = 3;
+        const y = 2;
         const numberOfXs = Math.floor(quantity / x);
-        if (quantity > 2) {
-            const discountAmount = quantity * unitPrice - ((numberOfXs * 2 * unitPrice) + quantity % 3 * unitPrice);
-            discount = new Discount(this.product, "3 for 2", discountAmount);
+        if (quantity > y) {
+            const discountAmount = quantity * unitPrice - ((numberOfXs * y * unitPrice) + quantity % x * unitPrice);
+            discount = new Discount(this.product, `${x} for ${y}`, discountAmount);
         }
         return discount
     }
