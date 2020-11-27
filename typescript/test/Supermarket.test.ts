@@ -8,6 +8,7 @@ import {SpecialOfferType} from "../src/model/SpecialOfferType"
 import {ProductUnit} from "../src/model/ProductUnit"
 import {Offer} from "../src/model/Offer";
 import { FiveForAmount } from "../src/model/offers/FiveForAmount"
+import { TwoForAmount } from "../src/model/offers/TwoForAmount"
 const approvals = require('approvals')
 
 type Approvals = {
@@ -50,7 +51,7 @@ describe('Supermarket', function () {
         teller.addSpecialOffer(new Offer(SpecialOfferType.ThreeForTwo, toiletPaper, 0));
         teller.addSpecialOffer(new FiveForAmount(coffeeBeans, 21));
         teller.addSpecialOffer(new Offer(SpecialOfferType.TenPercentDiscount, toothbrush, 10.0));
-        teller.addSpecialOffer(new Offer(SpecialOfferType.TwoForAmount, biscuits, 9));
+        teller.addSpecialOffer(new TwoForAmount(biscuits, 9));
 
         const receipt: Receipt = teller.checksOutArticlesFrom(cart);
 
