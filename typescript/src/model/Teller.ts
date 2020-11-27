@@ -12,8 +12,8 @@ export class Teller {
     public constructor(private readonly catalog: SupermarketCatalog ) {
     }
 
-    public addSpecialOffer(offerType: SpecialOfferType , product: Product, argument: number): void {
-        this.offers[product.name] = new Offer(offerType, product, argument);
+    public addSpecialOffer(offer: Offer): void {
+        this.offers[offer.product.name] = offer;
     }
 
     public checksOutArticlesFrom(theCart: ShoppingCart): Receipt {
