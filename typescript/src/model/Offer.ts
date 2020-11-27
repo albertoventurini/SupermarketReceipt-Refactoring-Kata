@@ -7,9 +7,4 @@ export class Offer {
                        public readonly product: Product,
                        public readonly argument: number) {
     }
-
-    getProduct(): Product {
-        return this.product;
-    }
-
 }
