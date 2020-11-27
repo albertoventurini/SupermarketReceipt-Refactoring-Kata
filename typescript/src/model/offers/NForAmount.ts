@@ -1,16 +1,13 @@
 import { Discount } from "../Discount";
-import { Offer } from "../Offer";
+import { SpecialOffer } from "../Offer";
 import { Product } from "../Product";
-import { SpecialOfferType } from "../SpecialOfferType";
 import { SupermarketCatalog } from "../SupermarketCatalog";
 
-export abstract class NForAmount extends Offer {
+export abstract class NForAmount implements SpecialOffer {
 
-    public constructor(
-        public readonly specialOfferType: SpecialOfferType,
+    protected constructor(
         public readonly product: Product,
         public readonly amount: number) {
-            super(specialOfferType, product, amount);
     }
 
     protected abstract getN(): number;
@@ -22,8 +19,8 @@ export abstract class NForAmount extends Offer {
         const numberOfXs = Math.floor(quantity / x);
         
         if (quantity >= x) {
-            const discountTotal = unitPrice * quantity - (this.argument * numberOfXs + quantity % x * unitPrice);
-            discount = new Discount(this.product, x + " for " + this.argument, discountTotal);
+            const discountTotal = unitPrice * quantity - (this.amount * numberOfXs + quantity % x * unitPrice);
+            discount = new Discount(this.product, x + " for " + this.amount, discountTotal);
         }
         return discount;
     }

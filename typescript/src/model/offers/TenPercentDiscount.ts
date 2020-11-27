@@ -1,14 +1,12 @@
-import {SpecialOfferType} from "../SpecialOfferType";
 import {Product} from "../Product";
 import {SupermarketCatalog} from "../SupermarketCatalog";
 import {Discount} from "../Discount";
-import {Offer} from "../Offer";
+import {SpecialOffer} from "../Offer";
 
-export class TenPercentDiscount extends Offer {
+export class TenPercentDiscount implements SpecialOffer {
 
     public constructor(public readonly product: Product,
                        public readonly argument: number) {
-        super(SpecialOfferType.TenPercentDiscount, product, argument)
     }
 
     apply(catalog: SupermarketCatalog, quantity: number): Discount | null {
